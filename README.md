@@ -46,11 +46,17 @@ cd Automated-Attendance-System
 pip install opencv-python face_recognition numpy pandas
 ```
 
+---
+
+
 🚦 How to Run
 Start the attendance system by running:
 ```bash
 python main.py
 ```
+
+---
+
 
 📂 Project Structure
 ```plaintext
@@ -61,6 +67,8 @@ Automated-Attendance-System/
 ├── encodings.pickle        # Cached facial encodings for faster recognition
 └── README.md               # Project documentation
 ```
+
+---
 
 ## 📌 Notes
 

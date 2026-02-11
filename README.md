@@ -1,45 +1,42 @@
-# 📸 Automated Attendance System
+# 👤 Automated Attendance System using Facial Recognition
 
-A real-time facial recognition application built with **Python** that automates attendance logging. The system detects faces via a webcam, compares them against a database of known individuals, and logs the name and timestamp of recognized persons into a CSV file.
+A touchless, AI-powered solution for tracking attendance in real-time. Built between October and December 2024 to eliminate manual logging and prevent proxy attendance.
 
-## 🚀 Features
-* **Real-time Detection:** Uses a live camera feed to identify individuals instantly.
-* **Automated Logging:** Saves attendance with precise timestamps in `Attendance.csv`.
-* **High Accuracy:** Utilizes the `face_recognition` library's deep learning models for high verification accuracy.
-* **Duplicate Prevention:** The system checks the CSV and only logs a person once per session.
+---
+
+## 🚀 Key Features
+* **Real-Time Detection:** Identifies faces instantly via webcam stream.
+* **Automated Logging:** Saves data with timestamps directly to CSV/Excel.
+* **Accuracy:** Uses HOG and Deep Learning models for high-precision matching.
+* **Efficiency:** Pre-computes facial encodings for faster identification.
+
+---
 
 ## 🛠️ Tech Stack
 * **Language:** Python
-* **Libraries:** * `OpenCV`: For image processing and webcam integration.
-    * `face_recognition`: For face encoding and distance comparison.
-    * `NumPy`: For optimized array operations.
-    * `OS & Datetime`: For file handling and time tracking.
+* **Computer Vision:** OpenCV
+* **ML Libraries:** Face_Recognition, Dlib, NumPy
+* **Data Handling:** CSV / Pandas
 
-## 📂 Project Structure
-```plaintext
-├── faces/               # Folder containing reference images (e.g., Aryan.jpg)
-├── Attendance.py        # Main application script
-├── Attendance.csv       # Log file (generated automatically)
-└── README.md            # Project documentation
+---
 
-```
+## 🏗️ How it Works
 
-🏁 Getting Started
-1. Clone the repo:
+1. **Input:** Captures video frames from the camera.
+2. **Process:** Detects landmarks and converts them into a 128-dimensional vector.
+3. **Compare:** Matches the vector against the database of registered students.
+4. **Action:** Logs the name and time if a match is found.
 
-''' Bash
-git clone https://github.com/Aryan00Saini/Automated-Attendance-System.git
-'''
+---
 
+## 💻 Installation & Setup
 
-2.Install dependencies:
+```bash
+# Clone the repository
+git clone [https://github.com/Aryan00Saini/Automated-Attendance-System.git](https://github.com/Aryan00Saini/Automated-Attendance-System.git)
 
-''' Bash
+# Navigate to the project folder
+cd Automated-Attendance-System
+
+# Install required libraries
 pip install opencv-python face_recognition numpy
-'''
-
-3.Run the application:
-
-''' Bash
-python main.py
-'''

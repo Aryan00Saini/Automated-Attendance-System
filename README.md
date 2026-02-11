@@ -1,42 +1,41 @@
-# 👤 Automated Attendance System using Facial Recognition
+👤 Automated Attendance System
+A touchless, AI-powered solution for tracking attendance in real-time using Facial Recognition. This system replaces manual logging by identifying individuals via a webcam and recording their presence automatically.
 
-A touchless, AI-powered solution for tracking attendance in real-time. Built between October and December 2024 to eliminate manual logging and prevent proxy attendance.
+🚀 Key Features
+Real-Time Identification: Instantly detects and recognizes faces from a live video stream.
 
----
+Automatic Logging: Records attendance with precise timestamps directly into CSV files.
 
-## 🚀 Key Features
-* **Real-Time Detection:** Identifies faces instantly via webcam stream.
-* **Automated Logging:** Saves data with timestamps directly to CSV/Excel.
-* **Accuracy:** Uses HOG and Deep Learning models for high-precision matching.
-* **Efficiency:** Pre-computes facial encodings for faster identification.
+Deep Learning Accuracy: Leverages high-precision models to minimize errors and prevent "proxy" attendance.
 
----
+Optimized Performance: Uses cached facial encodings to ensure fast recognition without high CPU load.
 
-## 🛠️ Tech Stack
-* **Language:** Python
-* **Computer Vision:** OpenCV
-* **ML Libraries:** Face_Recognition, Dlib, NumPy
-* **Data Handling:** CSV / Pandas
+🛠️ Getting Started
+Prerequisites
+Python 3.8 or higher
 
----
+A functional webcam
 
-## 🏗️ How it Works
+C++ Compiler (required for the dlib library)
 
-1. **Input:** Captures video frames from the camera.
-2. **Process:** Detects landmarks and converts them into a 128-dimensional vector.
-3. **Compare:** Matches the vector against the database of registered students.
-4. **Action:** Logs the name and time if a match is found.
-
----
-
-## 💻 Installation & Setup
-
-```bash
-# Clone the repository
-git clone [https://github.com/Aryan00Saini/Automated-Attendance-System.git](https://github.com/Aryan00Saini/Automated-Attendance-System.git)
-
-# Navigate to the project folder
+1. Clone the repository
+Bash
+git clone https://github.com/Aryan00Saini/Automated-Attendance-System.git
+2. Navigate to the project folder
+Bash
 cd Automated-Attendance-System
+3. Install required libraries
+Bash
+pip install opencv-python face_recognition numpy pandas
+🚦 How to Run
+To start the attendance tracking system, execute the primary script:
 
-# Install required libraries
-pip install opencv-python face_recognition numpy
+Bash
+python main.py
+📂 Project Structure
+Plaintext
+├── Training_Images/       # Database of student photos for recognition
+├── Attendance_Logs/       # Automatically generated CSV attendance sheets
+├── main.py                # Primary script to run the recognition system
+├── encodings.pickle       # Cached facial data for fast processing
+└── README.md              # Project documentation and setup guide

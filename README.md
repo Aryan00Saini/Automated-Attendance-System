@@ -22,3 +22,20 @@ A real-time facial recognition application built with **Python** that automates 
 ├── Attendance.csv       # Log file (generated automatically)
 └── README.md            # Project documentation
 
+🏁 Getting Started
+1. Clone the repo:
+
+''' Bash
+git clone https://github.com/Aryan00Saini/Automated-Attendance-System.git
+
+
+2.Install dependencies:
+
+''' Bash
+pip install opencv-python face_recognition numpy
+
+
+3.Run the application:
+
+''' Bash
+python main.py
